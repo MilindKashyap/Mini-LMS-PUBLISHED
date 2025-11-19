@@ -5,7 +5,7 @@ services:
     env: python
     plan: free
     buildCommand: chmod +x build.sh && ./build.sh
-    startCommand: cd lms_backend && gunicorn lms_project.wsgi:application --bind 0.0.0.0:$PORT
+    startCommand: cd lms_backend && gunicorn lms_project.wsgi:application
     envVars:
       - key: PYTHON_VERSION
         value: 3.12.4
